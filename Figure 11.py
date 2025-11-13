@@ -102,13 +102,6 @@ for n in range(Nt + 1):
     u_next = np.vectorize(u_next)
     x = np.linspace(0, 1, 1000)
     y = u_next(x)
-    if n == 1:
-        plt.plot(x, y, color='r', alpha=0.3, label='Godunov difference solution')
-    else:
-        plt.plot(x, y, color='r', alpha=0.3)
-    plt.title('t= ' + str(round(t, 3)))
-    plt.xlabel('x')
-    plt.ylabel('u(x,t)')
 
     # Store mass at this time step
     mass.append(np.sum(u_new**2*delta_x))
@@ -124,4 +117,5 @@ plt.figure()
 plt.plot(time, mass,alpha=0.7)
 plt.xlabel('time')
 plt.ylabel('Total Mass')
+
 plt.show()
