@@ -37,7 +37,6 @@ def f_G(x):
 f_G = np.vectorize(f_G)
 x = np.linspace(0, 1, 10000)
 y = f_G(x)
-plt.plot(x, y, label='initial condition', alpha=0.3)
 
 # Time 
 t_end = 2
@@ -51,10 +50,12 @@ def F(x):
 # Initialize
 u = Mean_vals.copy()
 mass = []         # store mass values
+ke = []           # store ke values
 time = []         # store time steps
 
-# Compute initial mass
-mass.append(np.sum(u**2) * delta_x)
+# Compute initial mass and ke
+mass.append(np.sum(u) * delta_x)
+ke.append(np.sum(u**2) * delta_x)
 time.append(0)
 
 # Time loop
@@ -103,19 +104,23 @@ for n in range(Nt + 1):
     x = np.linspace(0, 1, 1000)
     y = u_next(x)
 
-    # Store mass at this time step
-    mass.append(np.sum(u_new**2*delta_x))
+    # Store mass and KE at current time step
+    mass.append(np.sum(u_new*delta_x))
+    ke.append(np.sum(u_new**2*delta_x))
     time.append(t)
 
     u = u_new
-
-plt.legend(loc='upper left', fontsize=9)
-plt.show()
 
 # ====== MASS PLOT ======
 plt.figure()
 plt.plot(time, mass,alpha=0.7)
 plt.xlabel('time')
 plt.ylabel('Total Mass')
+plt.show()
 
+# ====== KE PLOT =======
+plt.figure()
+plt.plot(time, ke, 'red')
+plt.xlabel('time')
+plt.ylabel('Total Kinetic Energy')
 plt.show()
