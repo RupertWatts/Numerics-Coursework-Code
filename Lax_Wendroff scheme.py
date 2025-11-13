@@ -27,8 +27,9 @@ def LWM(u, i, Nx, Nt):
     
         Parameters:
         u         : input function
-        Nx        : number of position points the function is calculated for
-        Nt        : the number of timesteps the function is calculated for
+        i         : position number on the function
+        Nx        : number of position points the function is calculated for in one unit position
+        Nt        : the number of timesteps the function is calculated for in 1 unit time
 
     Returns:
         u_new     : updated function value at the next timestep for the given position

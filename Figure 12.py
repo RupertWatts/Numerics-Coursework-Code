@@ -36,13 +36,13 @@ def plot_t(t):
     
 
 # setup
-Nx = 50   # The number of points x is calculated at  # The number of time points calculated
+Nx = 50
 Nt = 50
-x = np.linspace(0, 1, Nx+1)  # spatial resolution   # time resolution
+x = np.linspace(0, 1, Nx+1)
 max_t = 2
 u = IC(Nx)
 
-# calculating the function at each timestep and updates u = function for the next step
+# calculating the function at each timestep
 times = timesteps(u, Nx, Nt)
 
 multiplot(Nt*max_t)
