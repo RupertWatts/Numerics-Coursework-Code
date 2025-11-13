@@ -23,7 +23,7 @@ def multiplot(lines):
 
 
 def plot_t(t):
-    # Plot a graph of the solution at a fixed time along with the IC
+    # Plot a graph of the solution at the timestep number t along with the IC
     fig, ax = plt.subplots()
     ax.plot(x, u, color='b', label='Initial condition', alpha = 0.8)
     ax.plot(x, times[t], color='r', alpha = 0.5, label=f'Solution at t={1/Nt * t}')
