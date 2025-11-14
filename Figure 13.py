@@ -1,4 +1,5 @@
-# Ewan Strathdee
+##### Ewan Strathdee #####
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -62,5 +63,6 @@ plt.ylabel('log(L2 error)')
 plt.title('Lax-Wendroff Accuracy')
 
 plt.show()
+
 
 
