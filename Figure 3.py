@@ -1,3 +1,4 @@
+#Author: Rupert Watts
 import numpy as np
 
 
