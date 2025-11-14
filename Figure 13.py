@@ -42,15 +42,15 @@ for i in range(1, int(Nt*max_t) + 1):
     u[:] = function
     t = i * dt
     time.append(t)
-    # Analytical solution along characteristics
+    # Analytical solution along characteristics (Rupert Watts)
     for j in range(len(x)):
         x_char[j] = x[j] + I(x[j]) * t
 
     u_exact = I(x)  # IC values
-    # Interpolate analytic solution onto uniform FD grid
+    # Interpolate analytic solution onto uniform FD grid (Rupert Watts)
     u_exact_on_grid = np.interp(x, x_char, u_exact)
 
-    # Compute L2 error
+    # Compute L2 error (Rupert Watts)
     E_L2 = np.sqrt(np.mean((u - u_exact_on_grid)**2))
     error_L2.append(E_L2)
 
@@ -62,4 +62,5 @@ plt.ylabel('log(L2 error)')
 plt.title('Lax-Wendroff Accuracy')
 
 plt.show()
+
 
