@@ -1,4 +1,5 @@
-# Ewan Strathdee
+##### Ewan Strathdee #####
+
 import numpy as np
 
 
@@ -81,4 +82,5 @@ def timesteps(u, Nx, Nt):
         j += 1
 
     return times
+
 
