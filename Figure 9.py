@@ -1,3 +1,4 @@
+#Author: Rupert Watts
 import matplotlib.pyplot as plt
 
 # Times to plot
