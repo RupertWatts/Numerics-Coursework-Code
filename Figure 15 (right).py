@@ -1,4 +1,5 @@
-# Ewan Strathdee
+##### Ewan Strathdee #####
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -23,4 +24,5 @@ ax.plot(x, maxes)
 
 plt.xlabel('1/Δt')
 plt.ylabel('Max(A)')
+
 
