@@ -1,3 +1,4 @@
+# Ewan Strathdee
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -36,3 +37,4 @@ stability(t, Nx, 100, 'b')
 stability(t, Nx, 50, 'y')
 stability(t, Nx, 33, 'g')
 stability(t, Nx, 25, 'r')
+
