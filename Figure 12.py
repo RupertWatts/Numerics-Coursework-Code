@@ -1,4 +1,5 @@
-# Ewan Strathdee
+##### Ewan Strathdee #####
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -48,4 +49,5 @@ times = timesteps(u, Nx, Nt)
 
 multiplot(Nt*max_t)
 plot_t(7)
+
 
