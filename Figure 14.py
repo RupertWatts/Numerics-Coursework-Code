@@ -1,3 +1,5 @@
+##### Joseph Winter #####
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -86,3 +88,4 @@ plt.plot(np.linspace(0,2,102), ke,'r',alpha=0.7)
 plt.xlabel('time')
 plt.ylabel('Total Kinetic Energy')
 plt.show()
+
