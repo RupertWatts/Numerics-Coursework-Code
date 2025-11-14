@@ -1,3 +1,5 @@
+##### Joseph Winter #####
+
 from scipy.integrate import quad
 from scipy.optimize import minimize_scalar
 import numpy as np
@@ -124,3 +126,4 @@ plt.plot(time, ke, 'red')
 plt.xlabel('time')
 plt.ylabel('Total Kinetic Energy')
 plt.show()
+
